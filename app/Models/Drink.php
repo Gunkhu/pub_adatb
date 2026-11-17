@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Drink extends Model
 {
+    protected $fillable = ["name","amount","price","type_id","package_id"];
+
     public function package(): BelongsTo
     {
         return $this->belongsTo(Package::class);
